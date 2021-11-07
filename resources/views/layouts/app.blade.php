@@ -24,6 +24,10 @@
     <div id="app">
 
     <div class="navbar_top">
+    <div onclick="showSearsh()" class="searchingmobil" >
+             <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+
         <div class="navLogo">
             <a href="/"> <img src="{{ asset('/img/logo.png') }}" alt="freecours logo"> </a>
         </div>
@@ -50,7 +54,10 @@
             </ul>
         </div>
 
-        <div class="searshing">
+        <div onclick="hideSearch()" class="searshing" >
+                 <div onclick="closSearch()" class="closeSearch ">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
             <form action="#" method="get">
                 <div> <input type="text" name="search" placeholder="Search"> </div>
                 <div> <button type="submit"> <i class="fa fa-search" aria-hidden="true"></i> </button> </div>
@@ -58,6 +65,7 @@
         </div>
 
         <div onclick="showNav()" class="birgerNav" >
+            
             <i class="fa fa-navicon" aria-hidden="true"></i>
         </div>
 
