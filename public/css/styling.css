@@ -46,7 +46,7 @@
     border-right: none;
 }
 .navbar_top .searshing form button {
-    background: red;
+    background: rgb(0, 0, 0);
     padding: 3px;
     border: none;
     color: white;
@@ -149,3 +149,29 @@
     }
 }
 
+
+
+
+.desc_section_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.desc_section_top .desc_section_top_img img {
+    width: 400px;
+}
+.desc_section_top .desc_section_top_text {
+    max-width: 500px;
+}
+.desc_section_top .desc_section_top_text p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: light;
+    font-size: 19px;
+}
+.desc_section_top .desc_section_top_text h1 {
+    font-weight: 600;
+    font-size: 62px;
+    font-family: 'Semi-bold 700', sans-serif ;
+}

@@ -11,7 +11,9 @@
     <link rel="stylesheet"  href="{{ asset('css/styling.css') }}">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -37,7 +39,7 @@
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </div>
             <ul> 
-                <li><a href="">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="">Categories</a></li>
                 <li> <a href=""> Courses </a> </li>
                     @if (Auth::check())

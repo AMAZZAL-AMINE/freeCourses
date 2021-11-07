@@ -2,21 +2,14 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+    <div class="desc_section_top">
+        <div class="desc_section_top_text">
+            <div> <h1>Learn, Everything  Free</h1> </div>
+            <div><p>Build skills with Free courses & Learn Without Waste A Dollar , We Are Here To Help You.</p></div>
+            <div><a href=""><button class="btn btn-dark w-50">Start Now</button></a></div>
+        </div>
+        <div class="desc_section_top_img">
+            <img src="/img/topimg.png" alt="">
         </div>
     </div>
 </div>
