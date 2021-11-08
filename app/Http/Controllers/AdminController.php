@@ -21,4 +21,6 @@ class AdminController extends Controller
     public function addCoursePage() {
         return view('admin.addcours');
     }
+
+    
 }
