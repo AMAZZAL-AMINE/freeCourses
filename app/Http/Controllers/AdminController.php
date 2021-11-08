@@ -8,12 +8,7 @@ class AdminController extends Controller
 {
     //put hackers and users away if not admin
     public function __construct() {
-        $this->middleware('auth')
-                ->with(
-                    array(
-                        'message' => 'heelo Awssome Admin'
-                    ) 
-                );
+        $this->middleware('auth');
     }
 
 
