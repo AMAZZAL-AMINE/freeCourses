@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
     // ==> routing update category 
     // ==> routing users page
   */
+
+Route::get('Admin/Dashboard', [AdminController::class, 'Dashboard'])->name('admin.Dashboard');
+Route::get('/Admin/Add-New-Cours', [AdminController::class, 'addCoursePage'])->name('cours.create');
