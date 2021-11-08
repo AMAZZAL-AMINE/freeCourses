@@ -24,6 +24,9 @@
     margin-left: 10px;
 }
 
+
+ 
+
 .navbar_top .navList ul li a {
     color: rgb(24, 16, 16);
     font-weight: 600;
@@ -84,6 +87,8 @@
      color: red;
      cursor: pointer;
  }
+
+ 
 
  .closeSearch {
      font-size: 24px;
