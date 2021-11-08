@@ -115,6 +115,9 @@
         display: none;
         overflow-y: scroll;
     }
+    .navList .hideHrHeightInmOBILE {
+        display: none;
+    }
     .navbar_top .navList ul {
         margin-top: 40%;
     }

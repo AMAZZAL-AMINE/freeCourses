@@ -45,13 +45,14 @@
                 <li><a href="">Categories</a></li>
                 <li> <a href=""> Courses </a> </li>
                     @if (Auth::check())
+                    <li class="hideHrHeightInmOBILE">|</li>
                         <li  class="profile"> <a href="">Profile</a></li>
                         @else
-                        <li>|</li>
+                        <li class="hideHrHeightInmOBILE">|</li>
                             <li class="login">
                                 <a class="text-success" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            <li>|</li>
+                            <li  class="hideHrHeightInmOBILE">|</li>
                             <li class="register">
                                 <a class="text-success" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
