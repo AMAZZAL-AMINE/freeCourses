@@ -21,6 +21,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('/js/script.js') }}">  </script>
+    <link rel="stylesheet" href="{{ asset('cssTwo/style.css') }}">
+    <link rel="stylesheet" href="css/ionicons.min.css">
 </head>
 <body>
     <div id="app">
@@ -77,5 +79,29 @@
             @yield('content')
         </main>
     </div>
+
+
+    <footer class="footer-07 mt-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<h2 class="footer-heading"><a href="/" class="logo  ">FreeCourses</a></h2>
+						<p class="menu">
+							<a href="/">Home</a>
+							<a href="#">Courses</a>
+							<a href="#">Categories</a>
+						</p>
+ 
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col-md-12 text-center">
+						<p class="copyright">
+					  Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved |  made with <span class="text-danger"><i class="fa fa-heart" aria-hidden="true"></i></span> by <a href="/" target="_blank">FreeCourses</a>
+					  
+					</div>
+				</div>
+			</div>
+		</footer>
 </body>
 </html>
