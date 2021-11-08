@@ -20,3 +20,9 @@ use App\Http\Controllers\HomeController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+
+// ==> routing page coursers
+// ==> routing categries page 
+// ==> routing serach page
