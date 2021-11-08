@@ -23,6 +23,19 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 
-// ==> routing page coursers
-// ==> routing categries page 
-// ==> routing serach page
+/**
+    // ==> routing page coursers
+    // ==> routing categries page 
+    // ==> routing serach page
+ */
+
+ /** ===> Routing all page Admin and Controllers
+    // ==> routing dashboured page 
+    // ==> routing add ourses page
+    // ==> routing add categories page
+    // ==> routing manager courses page
+    // ==> routing manager categories
+    // ==> routing upfdate cours
+    // ==> routing update category 
+    // ==> routing users page
+  */
