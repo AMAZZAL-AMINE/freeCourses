@@ -41,5 +41,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
     // ==> routing users page
   */
 
+//return to admin dahsboard
 Route::get('Admin/Dashboard', [AdminController::class, 'Dashboard'])->name('admin.Dashboard');
+//return to admin add new cours
 Route::get('/Admin/Add-New-Cours', [AdminController::class, 'addCoursePage'])->name('cours.create');
+//return to store data in adatabase using method post
+Route::post('/Admin/Add-New-Cours', [AdminController::class, 'storeCours'])->name('cours.store');

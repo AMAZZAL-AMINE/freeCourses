@@ -1,9 +1,22 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container m-3">
-    <h1 class="text-muted">Add New Cours</h1>
-    <form action="#" method="post" enctype="multipart/form-data">
+
+<div class="container">
+    <h1 class="text-muted border-bottom mb-3">Add New Cours</h1>
+    @if (session()->has('message'))
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong> {{ session('message') }}</strong> 
+        </div>
+        
+        <script>
+          $(".alert").alert();
+        </script>
+    @endif
+    <form action="{{ route('cours.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <input id="cours" class="form-control" type="text" name="title" placeholder="Cours Title">
@@ -16,13 +29,13 @@
             <textarea id="desc" name="desc" placeholder="Cours Description"></textarea>
         </div>
         <div class="form-group">
-            <input id="creted_by" class="form-control" type="text" name="creted_by" placeholder="Who Creted this Cours ?">
+            <input id="created_by" class="form-control" type="text" name="created_by" placeholder="Who Creted this Cours ?">
         </div>
         <div class="form-group">
             <input id="url" class="form-control" type="url" name="url" placeholder="Link From Google Drive">
         </div>
         <div class="form-group">
-            <input id="img" class="form-control" type="file" name="url" placeholder="Cours Image">
+            <input id="img" class="form-control-file bt-white p-2 rounded border" type="file" name="img" placeholder="Cours Image">
         </div>
         <div class="form-group">
             <select id="category" class="form-control" name="category">
@@ -33,8 +46,10 @@
                 <option value="4">Mobile Developments</option>
             </select>
         </div>
+        <button class="btn btn-primary w-100" type="submit">Add Cours</button>
     </form>
 </div>
+
 
 <script>
     tinymce.init({
