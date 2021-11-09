@@ -16,5 +16,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="all_courses_showing">
+            <div class="group_for_all">
+                <div class="cart_cours">
+                    <div class="card_img"> <img src="" alt="">  </div>
+                    <div class="card_cours_body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

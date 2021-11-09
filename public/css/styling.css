@@ -297,11 +297,12 @@
 
 @media only screen and (max-width: 525px) {
     .courses_some_quots {
-        padding: 55px;
+        padding: 35px;
         
     }
     .courses_some_quots p {
         max-width: 100%;
+        font-size: 15px;
     }
     
 }
