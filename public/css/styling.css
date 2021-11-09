@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+ 
 .navbar_top {
     display: flex;
     justify-content: space-around;
@@ -305,4 +305,54 @@
         font-size: 15px;
     }
     
+} 
+
+
+/**
+ * tghis is styling for all courses
+ */
+
+.all_courses_showing {
+    margin-top: 54px;
+}
+
+.all_courses_showing .group_for_all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.all_courses_showing .group_for_all .cart_cours {
+    max-width: 300px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    background-color: rgba(255, 255, 255, 0.37);
+    margin-left: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    margin-bottom: 15px;
+}
+.all_courses_showing .group_for_all .cart_cours:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    backdrop-filter: blur(15px);
+}
+.all_courses_showing .group_for_all .cart_cours a {
+    color: black;
+}
+.all_courses_showing .group_for_all .cart_cours button {
+    border: 1px solid black;
+    background: none;
+    padding: 9px;
+    width: 100%;
+    margin-top: 10px;
+}
+.all_courses_showing .group_for_all .cart_cours .card_cours_body {
+    padding: 9px;
+}
+.all_courses_showing .group_for_all .cart_cours .card_img img {
+    width: 100%; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
 }
