@@ -20,38 +20,18 @@
         <div class="all_courses_showing container">
             <div class="group_for_all">
 
-
-  
-
-
-
+            @foreach ($courses as $cours)
                 <div class="cart_cours">
                     <a href="">
-                        <div class="card_img"> <img src="/img/learnTwo.jpg" alt="">  </div>
+                        <div class="card_img"> <img src="{{ asset('/storage/'.$cours->img) }}" alt="">  </div>
                         <div class="card_cours_body">
-                            <div class="title_cours"><b> C Programming For Begi nners - Master the C Language </b></div>
-                            <div class="desc_cours">  Understand the core language that ... </div>
+                            <div class="title_cours"><b> {{ Str::limit($cours->title, 50, '') }} </b></div>
+                            <div class="desc_cours">{{ Str::limit(htmlspecialchars(trim(strip_tags($cours->desc))), 30, '...') }}</div>
                             <div> <a href=""><button>Show Details</button></a> </div>
                         </div>  
                     </a>
                 </div>
-
-
-
-
-                <div class="cart_cours">
-                    <a href="">
-                        <div class="card_img"> <img src="/img/learnTwo.jpg" alt="">  </div>
-                        <div class="card_cours_body">
-                            <div class="title_cours"><b> C Programming For Begi nners - Master the C Language </b></div>
-                            <div class="desc_cours">  Understand the core language that ... </div>
-                            <div> <a href=""><button>Show Details</button></a> </div>
-                        </div>  
-                    </a>
-                </div>
-
-
-
+            @endforeach
 
             </div>
         </div>

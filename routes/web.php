@@ -31,7 +31,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
     // ==> routing serach page
  */
 //routing page couses
-Route::get('/Couses', [CouresesController::class, 'index'])->name('courses');
+Route::get('/Courses', [CouresesController::class, 'index'])->name('courses');
 
  /** ===> Routing all page Admin and Controllers
     // ==> routing dashboured page 
