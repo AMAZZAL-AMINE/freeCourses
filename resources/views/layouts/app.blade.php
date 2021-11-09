@@ -43,7 +43,7 @@
             <ul> 
                 <li><a href="/">Home</a></li>
                 <li><a href="">Categories</a></li>
-                <li> <a href=""> Courses </a> </li>
+                <li> <a href="{{ route('courses') }}"> Courses </a> </li>
                     @if (Auth::check())
                     <li class="hideHrHeightInmOBILE">|</li>
                         <li  class="profile"> <a href="">Profile</a></li>
@@ -90,7 +90,7 @@
 						<h2 class="footer-heading"><a href="/" class="logo  ">FreeCourses</a></h2>
 						<p class="menu">
 							<a href="/">Home</a>
-							<a href="#">Courses</a>
+							<a href="{{ route('courses') }}">Courses</a>
 							<a href="#">Categories</a>
 						</p>
  

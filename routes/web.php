@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CouresesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
     // ==> routing categries page 
     // ==> routing serach page
  */
+//routing page couses
+Route::get('/Couses', [CouresesController::class, 'index'])->name('courses');
 
  /** ===> Routing all page Admin and Controllers
     // ==> routing dashboured page 
