@@ -16,7 +16,13 @@
   <!-- Layout styles -->
   <link rel="stylesheet" href="../assets/css/demo/style.css">
   <!-- End layout styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
   <link rel="shortcut icon" href="../assets/images/favicon.png" />
+  <script src="https://cdn.tiny.cloud/1/9rq7cimopkydfehbhz2x55dgf9o393x2anaodq6f4iywesvu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
 <script src="../assets/js/preloader.js"></script>
