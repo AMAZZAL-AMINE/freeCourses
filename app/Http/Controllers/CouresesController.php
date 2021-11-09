@@ -11,3 +11,5 @@ class CouresesController extends Controller
         return view('cours.index');
     }
 }
+
+
