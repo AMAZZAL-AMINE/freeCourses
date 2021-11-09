@@ -21,7 +21,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-  <link rel="shortcut icon" href="../assets/images/favicon.png" />
+  <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
   <script src="https://cdn.tiny.cloud/1/9rq7cimopkydfehbhz2x55dgf9o393x2anaodq6f4iywesvu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
@@ -36,13 +36,13 @@
       </div>
       <div class="mdc-drawer__content">
         <div class="user-info">
-          <p class="name">Clyde Miles</p>
-          <p class="email">clydemiles@elenor.us</p>
+          <p class="name">Admin FreeC</p>
+          <p class="email">{{ auth()->user()->email }}</p>
         </div>
         <div class="mdc-list-group">
           <nav class="mdc-list mdc-drawer-menu">
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="index.html">
+              <a class="mdc-drawer-link" href="{{ route('admin.Dashboard') }}">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">home</i>
                 Dashboard
               </a>
@@ -50,25 +50,25 @@
             <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="pages/forms/basic-forms.html">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i>
-                Forms
+                All Courses
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">dashboard</i>
-                UI Features
+                  Add New
                 <i class="mdc-drawer-arrow material-icons">chevron_right</i>
               </a>
               <div class="mdc-expansion-panel" id="ui-sub-menu">
                 <nav class="mdc-list mdc-drawer-submenu">
                   <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/ui-features/buttons.html">
-                      Buttons
+                    <a class="mdc-drawer-link" href="{{ route('cours.create') }}">
+                      New Cours
                     </a>
                   </div>
                   <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-drawer-link" href="pages/ui-features/typography.html">
-                      Typography
+                      New Category
                     </a>
                   </div>
                 </nav>
