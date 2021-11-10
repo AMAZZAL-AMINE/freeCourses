@@ -32,7 +32,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
  */
 //routing page couses
 Route::get('/Courses', [CouresesController::class, 'index'])->name('courses');
-
+//find products by categories
+Route::get('/Category/{slug}', [CouresesController::class, 'coursByCategory'])->name('category.find');
  /** ===> Routing all page Admin and Controllers
     // ==> routing dashboured page 
     // ==> routing add ourses page
@@ -54,3 +55,4 @@ Route::post('/Admin/Add-New-Cours', [AdminController::class, 'storeCours'])->nam
 Route::get('/Admin/Add-New-Category', [AdminController::class, 'addCategory'])->name('category.add');
 //routign store category in database backend
 Route::post('/Admin/Add-New-Category', [AdminController::class, 'StoreCategory'])->name('category.store');
+
