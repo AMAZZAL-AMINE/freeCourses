@@ -65,6 +65,23 @@ class AdminController extends Controller
         
     }
 
+    //add new category function
+    public function addCategory() {
+        return view('admin.addcategory');
+    }
+
+    //store category in database backend function
+    public function StoreCategory(Request $request) {
+        $data = $request->validate(
+            array(
+                'name' => 'required',
+                'slug' => 'required',
+                'img' => 'image'
+            ),
+        );
+        
+    }
+
     
     
 }

@@ -50,3 +50,7 @@ Route::get('Admin/Dashboard', [AdminController::class, 'Dashboard'])->name('admi
 Route::get('/Admin/Add-New-Cours', [AdminController::class, 'addCoursePage'])->name('cours.create');
 //return to store data in adatabase using method post
 Route::post('/Admin/Add-New-Cours', [AdminController::class, 'storeCours'])->name('cours.store');
+//routing add new category page
+Route::get('/Admin/Add-New-Category', [AdminController::class, 'addCategory'])->name('category.add');
+//routign store category in database backend
+Route::post('/Admin/Add-New-Category', [AdminController::class, 'StoreCategory'])->name('category.store');
