@@ -67,7 +67,7 @@
                     </a>
                   </div>
                   <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/ui-features/typography.html">
+                    <a class="mdc-drawer-link" href="{{ route('category.add') }}">
                       New Category
                     </a>
                   </div>

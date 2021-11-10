@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cours;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -20,7 +21,8 @@ class AdminController extends Controller
 
     //function for showint add new cours
     public function addCoursePage() {
-        return view('admin.addcours');
+        $categories = Category::all();
+        return view('admin.addcours', compact('categories'));
     }
 
     //stire  formData in database mysql
@@ -79,8 +81,29 @@ class AdminController extends Controller
                 'img' => 'image'
             ),
         );
+
+        $category = new Category;
+
+        if($request->hasFile('img')) {
+            $imgPath = request('img')->store('category_img', 'public');
+        }
+        $category->create(
+            array(
+                'name' => $data['name'],
+                'slug' => $data['slug'],
+                // 'img' => $imgPath ?? '',
+            )
+        );
+
+        return back()->with(
+            array(
+                'message' => 'Category Created Successfuly'
+            )
+        );
         
     }
+
+    
 
     
     

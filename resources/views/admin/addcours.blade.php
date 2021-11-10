@@ -39,11 +39,11 @@
         </div>
         <div class="form-group">
             <select id="category" class="form-control" name="category">
-                <option>Cours Category</option>
-                <option value="1">Coding</option>
-                <option value="2">Cebyr Security</option>
-                <option value="3">Web Development</option>
-                <option value="4">Mobile Developments</option>
+                <option value="">Cours Category</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+
             </select>
         </div>
         <button class="btn btn-primary w-100" type="submit">Add Cours</button>
