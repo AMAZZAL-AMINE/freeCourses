@@ -21,7 +21,11 @@
                     </div>
                 </div>
             @endforeach        
-
+            @if($categories->count() == 0)
+                <div class="text-center mt-5 mb-5">
+                    <p style="font-size : 20px;"> Sorry! There's No Categories To Show ): </p>
+                </div>
+            @endif
 
         </div>
     </div>

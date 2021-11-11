@@ -32,7 +32,11 @@
                     </a>
                 </div>
             @endforeach
-
+                @if($courses->count() == 0)
+                    <div class="text-center mt-5 mb-5">
+                        <p style="font-size : 20px;">Sorry! There No Product Right Now</p>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

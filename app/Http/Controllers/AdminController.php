@@ -91,7 +91,7 @@ class AdminController extends Controller
             array(
                 'name' => $data['name'],
                 'slug' => $data['slug'],
-                // 'img' => $imgPath ?? '',
+                'img' => $imgPath ?? '',
             )
         );
 
