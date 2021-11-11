@@ -34,6 +34,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/Courses', [CouresesController::class, 'index'])->name('courses');
 //find products by categories
 Route::get('/Category/{slug}', [CouresesController::class, 'coursByCategory'])->name('category.find');
+Route::get('/Categories', [CouresesController::class, 'allCategories'])->name('categories');
+
  /** ===> Routing all page Admin and Controllers
     // ==> routing dashboured page 
     // ==> routing add ourses page

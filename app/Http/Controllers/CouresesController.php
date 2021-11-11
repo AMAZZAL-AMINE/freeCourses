@@ -21,6 +21,12 @@ class CouresesController extends Controller
         $courses = $category->courses;
         return view('cours.category', compact('courses'));
     }
+
+    //return to categories page
+    public function allCategories() {
+        $categories = Category::has('courses')->get();
+        return view('cours.allcategories', compact('categories'));
+    }
 }
 
 

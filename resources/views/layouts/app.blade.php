@@ -42,8 +42,8 @@
                 </div>
             <ul> 
                 <li><a href="/">Home</a></li>
-                <li><a href="">Categories</a></li>
                 <li> <a href="{{ route('courses') }}"> Courses </a> </li>
+                <li><a href="{{ route('categories') }}">Categories</a></li>
                     @if (Auth::check())
                     <li class="hideHrHeightInmOBILE">|</li>
                         <li  class="profile"> <a href="">Profile</a></li>
