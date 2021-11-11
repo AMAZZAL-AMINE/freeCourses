@@ -30,7 +30,9 @@ class CouresesController extends Controller
 
     //create function cours details
     public function coursDetails($slug) {
-        $cours = Cours::find($slug);
+        //find product by slug
+        $cours = Cours::where('slug', $slug)->first();
+        //return to page details with cours who has this slug
         return view('cours.coursdetails', compact('cours'));
     }
 
