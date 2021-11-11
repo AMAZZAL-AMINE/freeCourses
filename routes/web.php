@@ -40,14 +40,16 @@ Route::get('/Categories', [CouresesController::class, 'allCategories'])->name('c
 Route::get('/Cours-Details/{slug}', [CouresesController::class, 'coursDetails'])->name('cours.details');
 
  /** ===> Routing all page Admin and Controllers
-    // ==> routing dashboured page 
-    // ==> routing add ourses page
-    // ==> routing add categories page
-    // ==> routing manager courses page
-    // ==> routing manager categories
-    // ==> routing upfdate cours
-    // ==> routing update category 
-    // ==> routing users page
+    // ==> routing dashboured page  => whiting
+    // ==> routing add ourses page => done
+    // ==> routing add categories page => done
+    // ==> routing manager courses page => ????
+    // ==> routing manager categories => ??
+    // ==> routing upfdate cours => ??
+    // ==> routing update category  => ??
+    // ==> routing users page =>
+    // ==> routing delete curs
+    // ==> routing delete categorie
   */
 
 //return to admin dahsboard

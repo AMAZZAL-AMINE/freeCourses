@@ -61,7 +61,7 @@ class AdminController extends Controller
         
         return back()->with(
             array(
-                'message' => 'Done ! Product Created Successfuly'
+                'message' => 'Done! Cours Has Been Created Successfuly'
             ),
         );
         
@@ -115,7 +115,6 @@ class AdminController extends Controller
         $categories = category::all();
         //return to view page admin 
         return view('admin.managegategory', compact('categories'));
-
     }
 
     
