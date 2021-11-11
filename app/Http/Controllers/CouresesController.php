@@ -27,6 +27,13 @@ class CouresesController extends Controller
         $categories = Category::has('courses')->get();
         return view('cours.allcategories', compact('categories'));
     }
+
+    //create function cours details
+    public function coursDetails($slug) {
+        $cours = Cours::find($slug);
+        return view('cours.coursdetails', compact('cours'));
+    }
+
 }
 
 
