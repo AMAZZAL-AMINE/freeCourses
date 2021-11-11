@@ -117,6 +117,45 @@ class AdminController extends Controller
         return view('admin.managegategory', compact('categories'));
     }
 
-    
+    //showing updateing cours forms
+    public function showUpdateCours($slug) {
+        $cours = Cours::where('slug', $slug)->get();
+        return view('admin.updatecours', compact('cours'));
+    }
+    //updating cours 
+    public function updateCours(Request $request, $slug) {
+        $data = $request->validate(
+            array(
+                'title' => ['required'],
+                'slug' => ['required'],
+                'desc' => ['required'],
+                'created_by' => ['required'],
+                'url' => ['required', 'url'],
+                'img' => ['required', 'image'],
+                'category' => ['required'],
+            ),
+        );  
+    }
+    if($request->hasFile('img')) {
+        $imagePath = request('img')->store('courses_image', 'public');
+    }
+    $coursTwo = Cours::where('slug', $slug)->get();
+    $cours = Cours::where('slug', $slug)->update(
+        array(
+            'title' => $data['title'],
+            'slug' => $data['slug'],
+            'desc' => $data['desc'],
+            'created_by' => $data['created_by'],
+            'url' => $data['url'],
+            'img' => $imagePath ?? $coursTwo->img ,
+            'category_id' => $data['category'],
+        )
+    );
+
+    return back()->with(
+        array(
+            "message" => "Wow My Hero! Cours Has Been Updated Successfuly"
+        ),
+    );
     
 }

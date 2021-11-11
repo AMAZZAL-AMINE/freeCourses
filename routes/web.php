@@ -66,3 +66,7 @@ Route::post('/Admin/Add-New-Category', [AdminController::class, 'StoreCategory']
 Route::get('/Admin/Manage-Courses', [AdminController::class, 'manageCourses'])->name('courses.manage');
 //routing page get all categories
 Route::get('/Admin/Manage-Categories', [AdminController::class, 'manageCatgories'])->name('categories.manage');
+//routing pqge shozing updating cours 
+Route::get('/Admin/Cours/{slug}/Update', (AdminController::class, 'showUpdateCours'))->route('coursupdate.show');
+//routing store updating data in database
+Route::put('/Admin/Cours/{slug}/Update', [AdminController::class, 'updateStoreCours'])->name('coursupdate.store');
