@@ -106,13 +106,16 @@ class AdminController extends Controller
     //manage all courses in page admin
     public function manageCourses() {
         $courses = Cours::all();
-        //return to view page admin whene the page create
+        //return to view page admin 
+        return view('admin.managecourses', compact('categories'));
     }
 
     //manage all categories in page admin
     public function manageCatgories() {
         $categories = category::all();
-        //return to view page admin whene created
+        //return to view page admin 
+        return view('admin.managegategory', compact('categories'));
+
     }
 
     

@@ -60,4 +60,7 @@ Route::post('/Admin/Add-New-Cours', [AdminController::class, 'storeCours'])->nam
 Route::get('/Admin/Add-New-Category', [AdminController::class, 'addCategory'])->name('category.add');
 //routign store category in database backend
 Route::post('/Admin/Add-New-Category', [AdminController::class, 'StoreCategory'])->name('category.store');
-
+//routing page manager courses
+Route::get('/Admin/Manage-Courses', [AdminController::class, 'manageCourses'])->name('courses.manage');
+//routing page get all categories
+Route::get('/Admin/Manage-Categories', [AdminController::class, 'manageCatgories'])->name('categories.manage');
