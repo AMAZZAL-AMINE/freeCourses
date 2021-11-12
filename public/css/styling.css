@@ -412,8 +412,36 @@
 .top_cours_details .courst_etals_text {
     max-width: 600px;
 } 
+.top_cours_details .courst_etals_text h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: white;
+
+}
+.top_cours_details .courst_etals_text .createdby_cours_details {
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.top_cours_details .courst_etals_text b {
+    font-size: 21px;
+    color: white;
+    color: red;
+ 
+ 
+}
+.top_cours_details .courst_etals_text blockquote {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: white;
+}
 
 .top_cours_details .cours_detais_img img {
-    max-width: 582px;
+    max-width: 482px;
     object-fit: cover;
+}
+.detail_page {
+    background-image: url('/img/hah.png');
+    background-attachment: cover;
+    background-size: cover;
+    padding: 25px;
 }

@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="detail_page">
-        <div class="top_cours_details">
+        <div class="top_cours_details" >
             <div class="courst_etals_text">
                 <div class="title_cours_details">
                     <h2>Testing Your Skills Brother hh</h2>
@@ -12,7 +12,7 @@
                     <b>By : Amine Amazzal</b>
                 </div>
                 <div class="description_page_details">
-                     <blockquote cite="description">
+                     <blockquote cite="description" class="text-muted">
                             ndustry. Lorem Ipsum has been the industry's standard dummy text 
                             ever since the 1500s, when an unknown printer took a galley of type and scrambled 
                             it to make a type specimen book. It has survived not only five centuries, but also the 
@@ -30,6 +30,9 @@
                             their infancy. Various versions have evolved over the years, sometimes by accident, sometimes 
                             on purpose (injected humour and the like).
                      </blockquote>
+                </div>
+                <div class="link_dowload_cours">
+                    <a href=""> <button class="btn btn-danger" type=""><i class="fa fa-download" aria-hidden="true"></i> Dwload Cours</button> </a>
                 </div>
             </div>
             <div class="cours_detais_img">
