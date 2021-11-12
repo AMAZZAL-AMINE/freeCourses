@@ -107,7 +107,7 @@ class AdminController extends Controller
     public function manageCourses() {
         $courses = Cours::all();
         //return to view page admin 
-        return view('admin.managecourses', compact('categories'));
+        return view('admin.managecourses', compact('courses'));
     }
 
     //manage all categories in page admin
@@ -134,28 +134,31 @@ class AdminController extends Controller
                 'img' => ['required', 'image'],
                 'category' => ['required'],
             ),
-        );  
+        );      
+        
+        if($request->hasFile('img')) {
+            $imagePath = request('img')->store('courses_image', 'public');
+        }
+        
+        $coursTwo = Cours::where('slug', $slug)->get();
+        $cours = Cours::where('slug', $slug)->update(
+            array(
+                'title' => $data['title'],
+                'slug' => $data['slug'],
+                'desc' => $data['desc'],
+                'created_by' => $data['created_by'],
+                'url' => $data['url'],
+                'img' => $imagePath ?? $coursTwo->img ,
+                'category_id' => $data['category'],
+            )
+        );
+    
+        return back()->with(
+            array(
+                "message" => "Wow My Hero! Cours Has Been Updated Successfuly"
+            ),
+        );
     }
-    if($request->hasFile('img')) {
-        $imagePath = request('img')->store('courses_image', 'public');
-    }
-    $coursTwo = Cours::where('slug', $slug)->get();
-    $cours = Cours::where('slug', $slug)->update(
-        array(
-            'title' => $data['title'],
-            'slug' => $data['slug'],
-            'desc' => $data['desc'],
-            'created_by' => $data['created_by'],
-            'url' => $data['url'],
-            'img' => $imagePath ?? $coursTwo->img ,
-            'category_id' => $data['category'],
-        )
-    );
 
-    return back()->with(
-        array(
-            "message" => "Wow My Hero! Cours Has Been Updated Successfuly"
-        ),
-    );
     
 }
