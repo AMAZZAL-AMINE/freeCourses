@@ -17,12 +17,12 @@
             </div>
         </div>
 
-        <div class="all_courses_showing container">
+        <div class="all_courses_showing ">
             <div class="group_for_all">
 
             @foreach ($courses as $cours)
                 <div class="cart_cours">
-                    <a href="">
+                    <a href="{{ route('cours.details',$cours->slug) }}">
                         <div class="card_img"> <img src="{{ asset('/storage/'.$cours->img) }}" alt="">  </div>
                         <div class="card_cours_body">
                             <div class="title_cours"><b> {{ Str::limit($cours->title, 50, '') }} </b></div>
