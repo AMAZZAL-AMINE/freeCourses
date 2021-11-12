@@ -2,13 +2,17 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="detail_page">
         <div class="top_cours_details">
             <div class="courst_etals_text">
-               <div>  <h1> {{ $cours->title }} </h1> </div>
-                <div>
-                    <small> Description </small>
-                    <?php  echo $cours->desc ?>
+                <div class="title_cours_details">
+                    <h2>Testing Your Skills Brother hh</h2>
+                </div>
+                <div class="createdby_cours_details">
+                    <b>By : Amine Amazzal</b>
+                </div>
+                <div class="description_page_details">
+                     
                 </div>
             </div>
             <div class="cours_detais_img">
