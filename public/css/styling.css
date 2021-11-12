@@ -402,3 +402,18 @@
 .all_categories_click_event .cart_category button {
     margin-top: 10px;
 }
+
+.top_cours_details {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.top_cours_details .courst_etals_text {
+    max-width: 600px;
+} 
+
+.top_cours_details .cours_detais_img img {
+    max-width: 582px;
+    object-fit: cover;
+}
