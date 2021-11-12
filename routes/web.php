@@ -43,13 +43,18 @@ Route::get('/Cours-Details/{slug}', [CouresesController::class, 'coursDetails'])
     // ==> routing dashboured page  => whiting
     // ==> routing add ourses page => done
     // ==> routing add categories page => done
+    --------------------------------------------------------
+    ########################################################
     // ==> routing manager courses page => ????
     // ==> routing manager categories => ??
     // ==> routing upfdate cours => ??
     // ==> routing update category  => ??
-    // ==> routing users page =>
+    // ==> routing users page => 
     // ==> routing delete curs
     // ==> routing delete categorie
+    // ==> styling page details cours
+    // ==> styling page manager courses
+    // styling page manager categories
   */
 
 //return to admin dahsboard
