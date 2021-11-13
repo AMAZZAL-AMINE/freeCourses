@@ -119,9 +119,12 @@ class AdminController extends Controller
 
     //showing updateing cours forms
     public function showUpdateCours($slug) {
-        $cours = Cours::where('slug', $slug)->get();
-        return view('admin.updatecours', compact('cours'));
+        $cours = Cours::find($slug);
+        $categories = Category::all();
+        return view('admin.upcours', compact('cours','categories'));
     }
+
+
     //updating cours 
     public function updateCours(Request $request, $slug) {
         $data = $request->validate(
@@ -140,8 +143,8 @@ class AdminController extends Controller
             $imagePath = request('img')->store('courses_image', 'public');
         }
         
-        $coursTwo = Cours::where('slug', $slug)->get();
-        $cours = Cours::where('slug', $slug)->update(
+        $coursTwo = Cours::find($slug);
+        $coursTwo->update(
             array(
                 'title' => $data['title'],
                 'slug' => $data['slug'],

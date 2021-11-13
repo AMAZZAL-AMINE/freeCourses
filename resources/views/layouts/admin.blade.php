@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Material Dash</title>
+  <title>Free Courses Admin</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="{{ asset('/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/assets/vendors/css/vendor.bundle.base.css') }}">
   <!-- endinject -->
   <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css">
-  <link rel="stylesheet" href="../assets/vendors/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="{{ asset('/assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/assets/vendors/jvectormap/jquery-jvectormap.css') }}">
   <!-- End plugin css for this page -->
   <!-- Layout styles -->
-  <link rel="stylesheet" href="../assets/css/demo/style.css">
+  <link rel="stylesheet" href="{{ asset('/assets/css/demo/style.css') }}">
   <!-- End layout styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,13 +25,13 @@
   <script src="https://cdn.tiny.cloud/1/9rq7cimopkydfehbhz2x55dgf9o393x2anaodq6f4iywesvu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
-<script src="../assets/js/preloader.js"></script>
+<script src="{{ asset('/assets/js/preloader.js') }}"></script>
   <div class="body-wrapper">
     <!-- partial:partials/_sidebar.html -->
     <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
       <div class="mdc-drawer__header">
         <a href="index.html" class="brand-logo">
-          <img src="../assets/images/logo.svg" alt="logo">
+          <img src="/img/logo.png" alt="logo">
         </a>
       </div>
       <div class="mdc-drawer__content">
@@ -145,22 +145,7 @@
           <span class="divider"></span>
           <a href="javascript:;">Logout</a>
         </div>
-        <div class="mdc-card premium-card">
-          <div class="d-flex align-items-center">
-            <div class="mdc-card icon-card box-shadow-0">
-              <i class="mdi mdi-shield-outline"></i>
-            </div>
-            <div>
-              <p class="mt-0 mb-1 ml-2 font-weight-bold tx-12">Material Dash</p>
-              <p class="mt-0 mb-0 ml-2 tx-10">Pro available</p>
-            </div>
-          </div>
-          <p class="tx-8 mt-3 mb-1">More elements. More Pages.</p>
-          <p class="tx-8 mb-3">Starting from $25.</p>
-          <a href="https://www.bootstrapdash.com/product/material-design-admin-template/" target="_blank">
-						<span class="mdc-button mdc-button--raised mdc-button--white">Upgrade to Pro</span>
-					</a>
-        </div>
+ 
       </div>
     </aside>
     <!-- partial -->
@@ -359,19 +344,19 @@
             @yield('content')
         </main>
   <!-- plugins:js -->
-  <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+  <script src="{{ asset('/assets/vendors/js/vendor.bundle.base.js') }}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
-  <script src="../assets/vendors/chartjs/Chart.min.js"></script>
-  <script src="../assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-  <script src="../assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="{{ asset('/assets/vendors/chartjs/Chart.min.js') }}"></script>
+  <script src="{{ asset('/assets/vendors/jvectormap/jquery-jvectormap.min.js') }}"></script>
+  <script src="{{ asset('/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
-  <script src="../assets/js/material.js"></script>
-  <script src="../assets/js/misc.js"></script>
+  <script src="{{ asset('/assets/js/material.js') }}"></script>
+  <script src="{{ asset('/assets/js/misc.js') }}"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="../assets/js/dashboard.js"></script>
+  <script src="{{ asset('/assets/js/dashboard.js') }}"></script>
   <!-- End custom js for this page-->
 </body>
 </html> 

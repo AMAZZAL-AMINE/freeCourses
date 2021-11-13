@@ -74,4 +74,4 @@ Route::get('/Admin/Manage-Categories', [AdminController::class, 'manageCatgories
 //routing pqge shozing updating cours 
 Route::get('/Admin/Cours/{slug}/Update', [AdminController::class, 'showUpdateCours'])->name('coursupdate.show');
 //routing store updating data in database
-Route::put('/Admin/Cours/{slug}/Update', [AdminController::class, 'updateStoreCours'])->name('coursupdate.store');
+Route::put('/Admin/Cours/{slug}/Update', [AdminController::class, 'updateCours'])->name('coursupdate.store');
