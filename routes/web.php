@@ -75,3 +75,7 @@ Route::get('/Admin/Manage-Categories', [AdminController::class, 'manageCatgories
 Route::get('/Admin/Cours/{slug}/Update', [AdminController::class, 'showUpdateCours'])->name('coursupdate.show');
 //routing store updating data in database
 Route::put('/Admin/Cours/{slug}/Update', [AdminController::class, 'updateCours'])->name('coursupdate.store');
+//showing update categories form
+Route::get('/Admin/{id}/Update-Category', [AdminController::class, 'updateCategoriesForm'])->name('category.showupdate');
+//store new update  data in database
+Route::put('/Admin/{id}/Update-Category', [AdminController::class, 'categoryUpdate'])->name('category.update');

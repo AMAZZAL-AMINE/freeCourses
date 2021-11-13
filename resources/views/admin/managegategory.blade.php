@@ -45,7 +45,7 @@ tr:nth-child(even) {
     <td> <img style="width: 35px;height: 35px;border-radius: 50px;" src="{{ asset('/storage/'.$category->img) }}" alt=""> </td>
     <td> {{ $category->name }} </td>
     <td> {{ $category->slug }} </td>
-    <td> <a class="btn btn-success" href=""> <i class="fa fa-edit" aria-hidden="true"></i> </a> </td>
+    <td> <a class="btn btn-success" href="{{ route('category.showupdate',$category->id) }}"> <i class="fa fa-edit" aria-hidden="true"></i> </a> </td>
     <td> 
         <form action="" method="post">
             @csrf

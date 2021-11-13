@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="text-muted border-bottom mb-3">Add New Cours</h1>
+    <h1 class="text-muted border-bottom mb-3">Update Cours {{ $cours->title }} </h1>
     @if (session()->has('message'))
         <div class="alert alert-primary alert-dismissible fade show" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">

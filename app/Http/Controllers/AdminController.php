@@ -163,5 +163,26 @@ class AdminController extends Controller
         );
     }
 
+    //delete cours
+    public function deleteCours($id) {
+        $cours = Cours::find($id);
+        //deleting cours
+    }
+
+    //update categories 
+    public function updateCategoriesForm($id) {
+        //showing update form 
+        $category = Category::find($id);
+        return view('admin.updatecategory', compact('category'));
+    }
+
+    //store new updated cours in data base
+    public function categoryUpdate($id, Request $request) {
+        $category = Category::find($id);
+        dd($request->name);
+        // 14 / 11 ==. updating categories in page admin
+    }
+
+
     
 }
