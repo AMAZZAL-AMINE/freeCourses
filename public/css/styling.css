@@ -406,6 +406,7 @@
 .top_cours_details {
     display: flex;
     justify-content: space-around;
+    align-items: start;
     
 }
 
@@ -444,4 +445,14 @@
     background-attachment: cover;
     background-size: cover;
     padding: 25px;
+}
+
+@media only screen and (max-width: 1135px) {
+    .top_cours_details {
+        flex-wrap: wrap-reverse;
+    }
+    .top_cours_details .cours_detais_img img {
+        max-width: 100%;
+         
+    }
 }

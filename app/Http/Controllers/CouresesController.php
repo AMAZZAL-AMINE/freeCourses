@@ -32,8 +32,10 @@ class CouresesController extends Controller
     public function coursDetails($slug) {
         //find product by slug
         $cours = Cours::where('slug', $slug)->first();
+        //get some courses with same categories 
+        $courses = Cours::where('category_id', $cours->category_id)->paginate(5);
         //return to page details with cours who has this slug
-        return view('cours.coursdetails', compact('cours'));
+        return view('cours.coursdetails', compact('cours','courses'));
     }
 
 }

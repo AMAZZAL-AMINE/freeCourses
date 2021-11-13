@@ -6,39 +6,51 @@
         <div class="top_cours_details" >
             <div class="courst_etals_text">
                 <div class="title_cours_details">
-                    <h2>Testing Your Skills Brother hh</h2>
+                    <h2> {{ $cours->title }} </h2>
                 </div>
                 <div class="createdby_cours_details">
-                    <b>By : Amine Amazzal</b>
+                    <b>By : {{ $cours->created_by }} </b>
                 </div>
                 <div class="description_page_details">
                      <blockquote cite="description" class="text-muted">
-                            ndustry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-                            it to make a type specimen book. It has survived not only five centuries, but also the 
-                            leap into electronic typesetting, remaining essentially unchanged. It was popularised 
-                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                            and more recently with desktop publishing software like Aldus PageMaker including 
-                            versions of Lorem Ipsum.
-                            Why do we use it?
-                            It is a long established fact that a reader will be distracted by the 
-                            readable content of a page when looking at its layout. The point of using 
-                            Lorem Ipsum is that it has a more-or-less normal distribution of letters, as 
-                            opposed to using 'Content here, content here', making it look like readable English. 
-                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their d
-                            efault model text, and a search for 'lorem ipsum' will uncover many web sites still in 
-                            their infancy. Various versions have evolved over the years, sometimes by accident, sometimes 
-                            on purpose (injected humour and the like).
+                             <?php echo $cours->desc ?>
                      </blockquote>
                 </div>
                 <div class="link_dowload_cours">
-                    <a href=""> <button class="btn btn-danger" type=""><i class="fa fa-download" aria-hidden="true"></i> Dwload Cours</button> </a>
+                    <a href="{{ $cours->url }}"> <button class="btn btn-danger w-100" type=""><i class="fa fa-download" aria-hidden="true"></i> Dwload Cours</button> </a>
                 </div>
             </div>
             <div class="cours_detais_img">
                 <img src="{{ asset('/storage/'.$cours->img) }}" alt="">
             </div>
         </div>
+
+
+
     </div>
+
+    <div class="all_courses_showing ">
+        <h2 class="text-center mb-5">Related Courses</h2>
+            <div class="group_for_all">
+
+            @foreach ($courses as $cours)
+                <div class="cart_cours">
+                    <a href="{{ route('cours.details',$cours->slug) }}">
+                        <div class="card_img"> <img src="{{ asset('/storage/'.$cours->img) }}" alt="">  </div>
+                        <div class="card_cours_body">
+                            <div class="title_cours"><b> {{ Str::limit($cours->title, 50, '') }} </b></div>
+                            <div class="desc_cours">{{ Str::limit(htmlspecialchars(trim(strip_tags($cours->desc))), 30, '...') }}</div>
+                            <div> <a href="{{ route('cours.details',$cours->slug) }}"><button>Show Details</button></a> </div>
+                        </div>  
+                    </a>
+                </div>
+            @endforeach
+                @if($courses->count() == 0)
+                    <div class="text-center mt-5 mb-5">
+                        <p style="font-size : 20px;">Sorry! There No Courses Right Now</p>
+                    </div>
+                @endif
+            </div>
+        </div>
 
 @endsection
