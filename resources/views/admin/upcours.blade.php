@@ -20,25 +20,73 @@
         @method('PUT')
         <div class="form-group">
             <input id="cours" class="form-control" type="text" name="title" placeholder="Cours Title" value="{{ $cours->title }}">
+            @error('title')
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            @enderror
         </div>
         <div class="form-group">
             <input id="slug" class="form-control" type="text" name="slug" placeholder="Cours Slug" value="{{ $cours->slug }}">
+            @error('slug')
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            @enderror
         </div>
 
         <div class="form-group">
             <textarea id="desc" name="desc" placeholder="Cours Description"> {{ $cours->desc }} </textarea>
+            @error('desc')
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            @enderror
         </div>
         <div class="form-group">
             <input id="created_by" class="form-control" type="text" name="created_by" placeholder="Who Creted this Cours ?" value="{{ $cours->created_by }}">
+            @error('created_by')
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            @enderror
         </div>
         <div class="form-group">
             <input id="url" class="form-control" type="url" name="url" placeholder="Link From Google Drive" value="{{ $cours->url }}">
+            @error('url')
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            @enderror
         </div>
         <div class="form-group">
             <div>
               <img src="{{ asset('/storage/'.$cours->img ) }}" alt="" class="w-50">
             </div>
-            <input id="img" class="form-control-file bt-white p-2 rounded border" type="file" name="img" placeholder="Cours Image">
+            <input id="img" class="form-control-file bt-white p-2 rounded border" type="file" name="img"  placeholder="Cours Image">
+            @error('img')
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> {{ $message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            @enderror
         </div>
         <div class="form-group">
             <select id="category" class="form-control" name="category">
@@ -46,7 +94,14 @@
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
-
+                @error('category')
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong> {{ $message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                @enderror
             </select>
         </div>
         <button class="btn btn-primary w-100" type="submit"><i class="fa fa-save" aria-hidden="true"></i> Save Edite</button>

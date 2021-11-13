@@ -129,14 +129,14 @@ class AdminController extends Controller
     public function updateCours(Request $request, $slug) {
         $data = $request->validate(
             array(
-                'title' => ['required'],
-                'slug' => ['required'],
-                'desc' => ['required'],
-                'created_by' => ['required'],
+                'title' => 'required',
+                'slug' => 'required',
+                'desc' => 'required',
+                'created_by' => 'required',
                 'url' => ['required', 'url'],
-                'img' => ['required', 'image'],
+                'img' => ['image'],
                 'category' => ['required'],
-            ),
+            )
         );      
         
         if($request->hasFile('img')) {
