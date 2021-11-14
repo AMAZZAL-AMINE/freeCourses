@@ -179,8 +179,31 @@ class AdminController extends Controller
     //store new updated cours in data base
     public function categoryUpdate($id, Request $request) {
         $category = Category::find($id);
-        dd($request->name);
-        // 14 / 11 ==. updating categories in page admin
+        $data = $request->validate(
+            array(
+                'name' => 'required',
+                'slug' => 'required',
+                'img' => 'image'
+            )
+        );
+
+        if($request->hasFile('img')) {
+            $imgPath = request('img')->store('category_img', 'public');
+        }
+
+        $category->update(
+            array(
+                'name' => $data['name'],
+                'slug' => $data['slug'],
+                'img' => $imgPath ?? $category->img
+            )
+        );
+
+        return back()->with(
+            array(
+                'message' => 'Oh Thats Fast Bro!, Your Category Is Updated Hamdullah <3 ',
+            )
+            );
     }
 
 
