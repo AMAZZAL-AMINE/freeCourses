@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apch2 public/
+web vendor/bin/heroku-php-apch2 public/
