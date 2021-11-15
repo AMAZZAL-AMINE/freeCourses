@@ -41,6 +41,7 @@ Route::get('/Cours-Details/{slug}', [CouresesController::class, 'coursDetails'])
 
 //routing search pox
 Route::get('/Courses/Searing', [CouresesController::class, 'search'])->name('cours.search');
+ 
 
  /** ===> Routing all page Admin and Controllers
     // ==> routing dashboured page  => whiting
