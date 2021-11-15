@@ -70,8 +70,8 @@
                  <div onclick="closSearch()" class="closeSearch ">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </div>
-            <form action="#" method="get">
-                <div> <input type="text" name="search" placeholder="Search"> </div>
+            <form action="{{ route('cours.search') }}" method="get">
+                <div> <input type="text" name="search" placeholder="Search" value="{{ $search ?? '' }}" > </div>
                 <div> <button type="submit"> <i class="fa fa-search" aria-hidden="true"></i> </button> </div>
             </form>
         </div>

@@ -38,6 +38,20 @@ class CouresesController extends Controller
         return view('cours.coursdetails', compact('cours','courses'));
     }
 
+
+    public function search(Request $request) {
+
+        //get search value from the input request
+        $search = $request->input('search');
+
+        $courses = Cours::query()
+            ->where('title', 'LIKE', "%{$search}%")
+            ->orWhere('slug', 'LIKE', "%{$search}%")
+            ->get();
+
+        return view('cours.search', compact('courses', 'search'));
+    }
+
 }
 
 

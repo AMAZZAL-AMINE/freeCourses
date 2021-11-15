@@ -16,7 +16,7 @@
                              <?php echo $cours->desc ?>
                      </blockquote>
                 </div>
-                <div class="link_dowload_cours">
+                <div class="link_dowload_cours mt-3">
                     <a href="{{ $cours->url }}"> <button class="btn btn-danger w-100" type=""><i class="fa fa-download" aria-hidden="true"></i> Dwload Cours</button> </a>
                 </div>
             </div>

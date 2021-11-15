@@ -39,6 +39,9 @@ Route::get('/Categories', [CouresesController::class, 'allCategories'])->name('c
 //routing get cours details
 Route::get('/Cours-Details/{slug}', [CouresesController::class, 'coursDetails'])->name('cours.details');
 
+//routing search pox
+Route::get('/Courses/Searing', [CouresesController::class, 'search'])->name('cours.search');
+
  /** ===> Routing all page Admin and Controllers
     // ==> routing dashboured page  => whiting
     // ==> routing add ourses page => done
