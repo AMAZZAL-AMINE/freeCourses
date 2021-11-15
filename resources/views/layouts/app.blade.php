@@ -46,7 +46,13 @@
                 <li><a href="{{ route('categories') }}">Categories</a></li>
                     @if (Auth::check())
                     <li class="hideHrHeightInmOBILE">|</li>
-                        <li  class="profile"> <a href="">Profile</a></li>
+                        <!-- <li  class="profile"> <a href="">Profile</a></li> -->
+                        <li  class="profile"> <a href="">
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <button style="background: none; border:none;" type="submit">Logout</button>
+                            </form>
+                        </a></li>
                         @else
                         <li class="hideHrHeightInmOBILE">|</li>
                             <li class="login">

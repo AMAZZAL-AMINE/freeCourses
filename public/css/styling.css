@@ -361,13 +361,13 @@
 }
 .all_courses_showing .group_for_all .cart_cours .card_img img {
     width: 100%; /* width of container */
-    height: 200px; /* height of container */
+    max-height: 200px; /* height of container */
+    min-height: 200px;
     object-fit: cover;
 }
 
 .all_categories_click_event {
     background-color: white;
-   
     padding: 9px;
 }
 
@@ -393,6 +393,9 @@
 }
 .all_categories_click_event .cart_category  img {
     width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    object-fit: cover;
 
 }
 .all_categories_click_event .cart_category .text {
@@ -427,9 +430,13 @@
     font-size: 21px;
     color: white;
     color: red;
- 
- 
 }
+.top_cours_details .courst_etals_text .description_page_details {
+    max-height: 552px;
+    overflow-y: scroll;
+}
+
+
 .top_cours_details .courst_etals_text blockquote {
     margin-top: 15px;
     padding: 10px;
