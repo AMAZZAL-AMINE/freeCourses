@@ -85,3 +85,5 @@ Route::get('/Admin/{id}/Update-Category', [AdminController::class, 'updateCatego
 Route::put('/Admin/{id}/Update-Category', [AdminController::class, 'categoryUpdate'])->name('category.update');
 //deleting courses
 Route::delete('/Admin/{id}/Delete-cours', [AdminController::class, 'deleteCourses'])->name('cours.delete');
+//deleting category
+Route::delete('/Admin/{id}/Delete-Category', [AdminController::class, 'deleteCategory'])->name('category.delete');

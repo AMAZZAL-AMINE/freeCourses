@@ -21,7 +21,14 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
- 
+ @if(session()->has('message'))
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong> {{ session('message') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+ @endif
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
 <br><br>
 
@@ -42,7 +49,7 @@ tr:nth-child(even) {
     <td>{{ $cours->id }}</td>
     <td> <img style="width: 35px;height: 35px;border-radius: 50px;" src="{{ asset('/storage/'.$cours->img) }}" alt=""> </td>
     <td> {{ $cours->title }} </td>
-    <td> {{ $cours->categories->name }} </td>
+    <td> {{ $cours->categories->name ?? 'no Category' }} </td>
     <td> <a class="btn btn-success" href="{{ route('coursupdate.show',$cours->id) }}"> <i class="fa fa-edit" aria-hidden="true"></i> </a> </td>
     <td> 
         <form action="{{ route('cours.delete',$cours->id) }}" method="post">

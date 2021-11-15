@@ -23,7 +23,16 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
- 
+
+@if(session()->has('message'))
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong> {{ session('message') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+ @endif
+
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
 <br><br>
 
@@ -47,7 +56,7 @@ tr:nth-child(even) {
     <td> {{ $category->slug }} </td>
     <td> <a class="btn btn-success" href="{{ route('category.showupdate',$category->id) }}"> <i class="fa fa-edit" aria-hidden="true"></i> </a> </td>
     <td> 
-        <form action="" method="post">
+        <form action="{{ route('category.delete',$category->id) }}" method="post">
             @csrf
             @method('DELETE')           
             <button type="submit" class="btn btn-danger" > <i class="fa fa-trash" aria-hidden="true"></i> </button>

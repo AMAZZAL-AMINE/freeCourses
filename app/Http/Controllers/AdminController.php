@@ -234,10 +234,25 @@ class AdminController extends Controller
 
         return back()->with(
             array(
-                "message" => "Done Bro ; Hamdullah Cours Deleted";
+                "message" => "Done Bro ; Hamdullah Cours Deleted"
             )
         );
       }
+    }
+
+
+    //deleting category
+    public function deleteCategory($id) {
+
+        $category = Category::find($id);
+        $category->where('id', $id)->delete();
+
+        return back()->with(
+           array(
+            "message" => "Oh Bro You Are Amazzing, You Do This, You Deleting This Category Without Any Problem"
+           )
+        );
+
     }
 
   
