@@ -2,9 +2,7 @@
 
 @section('content')
 
- 
 
- 
 <div class="">
     @if ($courses->isNotempty())
         @if (!empty($search))
