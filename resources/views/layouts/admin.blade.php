@@ -83,7 +83,7 @@
               </div>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="">
+              <a class="mdc-drawer-link" href="{{ route('users.all') }}">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pie_chart_outlined</i>
                   All Users
               </a>
@@ -358,13 +358,6 @@
 </html> 
 @else
 
-<h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
-   LOOOOOOOOOOOOOOOOL <br>
-   I think You Are not loking for courses, I think You Loking For problems my kid;
-   <br>
-   Go Away Please, Dont be stupid.
 
-
-</h1>
 
 @endif

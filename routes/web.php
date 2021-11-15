@@ -87,3 +87,7 @@ Route::put('/Admin/{id}/Update-Category', [AdminController::class, 'categoryUpda
 Route::delete('/Admin/{id}/Delete-cours', [AdminController::class, 'deleteCourses'])->name('cours.delete');
 //deleting category
 Route::delete('/Admin/{id}/Delete-Category', [AdminController::class, 'deleteCategory'])->name('category.delete');
+//get all users route
+Route::get('/Admin/Users', [AdminController::class, 'allUsers'])->name('users.all');
+//deleting user;
+Route::delete('/Admin/{id}/Delete-User', [AdminController::class, 'deleteUser'])->name('user.delete');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cours;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -21,6 +22,17 @@ class AdminController extends Controller
     public function Dashboard() {
         if(auth()->user()->id_admin == "yes") {
           return view("admin.dashboard");
+        }else {
+            echo '
+              <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+                  LOOOOOOOOOOOOOOOOL <br>
+                  I think You Are not loking for courses, I think You Loking For problems my kid;
+                  <br>
+                  Go Away Please, Dont be stupid.
+              
+              
+              </h1>
+            ';
         }
     }
 
@@ -29,7 +41,18 @@ class AdminController extends Controller
       if(auth()->user()->id_admin == "yes") {
         $categories = Category::all();
         return view('admin.addcours', compact('categories'));
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //stire  formData in database mysql
@@ -72,14 +95,36 @@ class AdminController extends Controller
                 'message' => 'Done! Cours Has Been Created Successfuly'
             ),
         );
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //add new category function
     public function addCategory() {
       if(auth()->user()->id_admin == "yes") {
         return view('admin.addcategory');
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //store category in database backend function
@@ -111,7 +156,18 @@ class AdminController extends Controller
                 'message' => 'Category Created Successfuly'
             )
         );
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //manage all courses in page admin
@@ -120,7 +176,18 @@ class AdminController extends Controller
         $courses = Cours::all();
         //return to view page admin 
         return view('admin.managecourses', compact('courses'));
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //manage all categories in page admin
@@ -129,7 +196,18 @@ class AdminController extends Controller
         $categories = category::all();
         //return to view page admin 
         return view('admin.managegategory', compact('categories'));
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //showing updateing cours forms
@@ -138,7 +216,18 @@ class AdminController extends Controller
         $cours = Cours::find($slug);
         $categories = Category::all();
         return view('admin.upcours', compact('cours','categories'));
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
 
@@ -180,7 +269,18 @@ class AdminController extends Controller
             ),
         );
 
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //update categories 
@@ -189,7 +289,18 @@ class AdminController extends Controller
         //showing update form 
         $category = Category::find($id);
         return view('admin.updatecategory', compact('category'));
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
     //store new updated cours in data base
@@ -221,7 +332,18 @@ class AdminController extends Controller
                 'message' => 'Oh Thats Fast Bro!, Your Category Is Updated Hamdullah <3 ',
             )
         );
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
 
     }
 
@@ -237,13 +359,24 @@ class AdminController extends Controller
                 "message" => "Done Bro ; Hamdullah Cours Deleted"
             )
         );
-      }
+      }else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
 
     //deleting category
     public function deleteCategory($id) {
-
+      if(auth()->user()->id_admin == "yes") {
         $category = Category::find($id);
         $category->where('id', $id)->delete();
 
@@ -252,8 +385,63 @@ class AdminController extends Controller
             "message" => "Oh Bro You Are Amazzing, You Do This, You Deleting This Category Without Any Problem"
            )
         );
-
+      }
+      else {
+        echo '
+          <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+              LOOOOOOOOOOOOOOOOL <br>
+              I think You Are not loking for courses, I think You Loking For problems my kid;
+              <br>
+              Go Away Please, Dont be stupid.
+          
+          
+          </h1>
+        ';
+    }
     }
 
+    //get all users in page admin
+    public function allUsers() {
+        
+        if(auth()->user()->id_admin == "yes") {
+            $users = User::all();
+            return view("admin.users", compact('users'));
+        } else {
+            echo '
+            <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+                LOOOOOOOOOOOOOOOOL <br>
+                I think You Are not loking for courses, I think You Loking For problems my kid;
+                <br>
+                Go Away Please, Dont be stupid.
+            
+            
+            </h1>
+          ';
+        }
+    }
+
+    //deleting users
+    public function  deleteUser($id) {
+      if(auth()->user()->id_admin == "yes") {
+        $user = User::find($id);
+        $user->where('id', $id)->delete();
+        return back()->with(
+            array(
+                "message" => "Oh You Do This Again Bro, You Delete This User, This Is Amazzing."
+            )
+        ); 
+      } else {
+          echo '
+            <h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+                LOOOOOOOOOOOOOOOOL <br>
+                I think You Are not loking for courses, I think You Loking For problems my kid;
+                <br>
+                Go Away Please, Dont be stupid.
+            
+            
+            </h1>
+          ';
+      }
+    }
   
 }
