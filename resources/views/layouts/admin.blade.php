@@ -1,3 +1,5 @@
+@if(auth()->user()->id_admin == "yes") 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,12 +83,12 @@
               </div>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="pages/charts/chartjs.html">
+              <a class="mdc-drawer-link" href="">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pie_chart_outlined</i>
-                Charts
+                  All Users
               </a>
             </div>
-            <div class="mdc-list-item mdc-drawer-item">
+            <!-- <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="sample-page-submenu">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pages</i>
                 Sample Pages
@@ -131,20 +133,16 @@
                   </div>
                 </nav>
               </div>
-            </div>
-            <div class="mdc-list-item mdc-drawer-item">
+            </div> -->
+            <!-- <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="https://www.bootstrapdash.com/demo/material-admin-free/jquery/documentation/documentation.html" target="_blank">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">description</i>
                 Documentation
               </a>
-            </div>
+            </div> -->
           </nav>
         </div>
-        <div class="profile-actions">
-          <a href="javascript:;">Settings</a>
-          <span class="divider"></span>
-          <a href="javascript:;">Logout</a>
-        </div>
+ 
  
       </div>
     </aside>
@@ -155,8 +153,8 @@
         <div class="mdc-top-app-bar__row">
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
-            <span class="mdc-top-app-bar__title">Greetings Clyde!</span>
-            <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
+       
+            <!-- <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
               <i class="material-icons mdc-text-field__icon">search</i>
               <input class="mdc-text-field__input" id="text-field-hero-input">
               <div class="mdc-notched-outline">
@@ -166,16 +164,14 @@
                 </div>
                 <div class="mdc-notched-outline__trailing"></div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
             <div class="menu-button-container menu-profile d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
                 <span class="d-flex align-items-center">
-                  <span class="figure">
-                    <img src="../assets/images/faces/face1.jpg" alt="user" class="user">
-                  </span>
-                  <span class="user-name">Clyde Miles</span>
+ 
+                  <span class="user-name"> {{ auth()->user()->name }} </span>
                 </span>
               </button>
               <div class="mdc-menu mdc-menu-surface" tabindex="-1">
@@ -200,11 +196,11 @@
               </div>
             </div>
             <div class="divider d-none d-md-block"></div>
-            <div class="menu-button-container d-none d-md-block">
+            <!-- <div class="menu-button-container d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-settings"></i>
-              </button>
-              <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+              </button> -->
+              <!-- <div class="mdc-menu mdc-menu-surface" tabindex="-1">
                 <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                   <li class="mdc-list-item" role="menuitem">
                     <div class="item-thumbnail item-thumbnail-icon-only">
@@ -224,8 +220,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="menu-button-container">
+            </div> -->
+            <!-- <div class="menu-button-container">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-bell"></i>
               </button>
@@ -270,8 +266,8 @@
                   </li> 
                 </ul>
               </div>
-            </div>
-            <div class="menu-button-container">
+            </div> -->
+            <!-- <div class="menu-button-container">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-email"></i>
                 <span class="count-indicator">
@@ -310,8 +306,8 @@
                   </li>                
                 </ul>
               </div>
-            </div>
-            <div class="menu-button-container d-none d-md-block">
+            </div> -->
+            <!-- <div class="menu-button-container d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-arrow-down-bold-box"></i>
               </button>
@@ -335,7 +331,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </header>
@@ -360,3 +356,15 @@
   <!-- End custom js for this page-->
 </body>
 </html> 
+@else
+
+<h1 style="text-align: center;margin-top: 15%; font-family: sans-serife;" class=" mt-5">
+   LOOOOOOOOOOOOOOOOL <br>
+   I think You Are not loking for courses, I think You Loking For problems my kid;
+   <br>
+   Go Away Please, Dont be stupid.
+
+
+</h1>
+
+@endif

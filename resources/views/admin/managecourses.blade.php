@@ -45,7 +45,7 @@ tr:nth-child(even) {
     <td> {{ $cours->categories->name }} </td>
     <td> <a class="btn btn-success" href="{{ route('coursupdate.show',$cours->id) }}"> <i class="fa fa-edit" aria-hidden="true"></i> </a> </td>
     <td> 
-        <form action="" method="post">
+        <form action="{{ route('cours.delete',$cours->id) }}" method="post">
             @csrf
             @method('DELETE')           
             <button type="submit" class="btn btn-danger" > <i class="fa fa-trash" aria-hidden="true"></i> </button>

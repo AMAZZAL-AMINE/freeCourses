@@ -83,3 +83,5 @@ Route::put('/Admin/Cours/{slug}/Update', [AdminController::class, 'updateCours']
 Route::get('/Admin/{id}/Update-Category', [AdminController::class, 'updateCategoriesForm'])->name('category.showupdate');
 //store new update  data in database
 Route::put('/Admin/{id}/Update-Category', [AdminController::class, 'categoryUpdate'])->name('category.update');
+//deleting courses
+Route::delete('/Admin/{id}/Delete-cours', [AdminController::class, 'deleteCourses'])->name('cours.delete');

@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    //put hackers and users away if not admin
+
+
+    
+            //put hackers and users away if not admin
     public function __construct() {
         $this->middleware('auth');
     }
@@ -16,17 +19,22 @@ class AdminController extends Controller
 
     //show admin dahsboard (admin home pade)
     public function Dashboard() {
-        return view("admin.dashboard");
+        if(auth()->user()->id_admin == "yes") {
+          return view("admin.dashboard");
+        }
     }
 
     //function for showint add new cours
     public function addCoursePage() {
+      if(auth()->user()->id_admin == "yes") {
         $categories = Category::all();
         return view('admin.addcours', compact('categories'));
+      }
     }
 
     //stire  formData in database mysql
     public function storeCours(Request $request) {
+      if(auth()->user()->id_admin == "yes") {
         $data = $request->validate(
             array(
                 'title' => ['required'],
@@ -64,16 +72,19 @@ class AdminController extends Controller
                 'message' => 'Done! Cours Has Been Created Successfuly'
             ),
         );
-        
+      }
     }
 
     //add new category function
     public function addCategory() {
+      if(auth()->user()->id_admin == "yes") {
         return view('admin.addcategory');
+      }
     }
 
     //store category in database backend function
     public function StoreCategory(Request $request) {
+      if(auth()->user()->id_admin == "yes") {
         $data = $request->validate(
             array(
                 'name' => 'required',
@@ -100,33 +111,40 @@ class AdminController extends Controller
                 'message' => 'Category Created Successfuly'
             )
         );
-        
+      }
     }
 
     //manage all courses in page admin
     public function manageCourses() {
+      if(auth()->user()->id_admin == "yes") {
         $courses = Cours::all();
         //return to view page admin 
         return view('admin.managecourses', compact('courses'));
+      }
     }
 
     //manage all categories in page admin
     public function manageCatgories() {
+      if(auth()->user()->id_admin == "yes") {
         $categories = category::all();
         //return to view page admin 
         return view('admin.managegategory', compact('categories'));
+      }
     }
 
     //showing updateing cours forms
     public function showUpdateCours($slug) {
+      if(auth()->user()->id_admin == "yes") {
         $cours = Cours::find($slug);
         $categories = Category::all();
         return view('admin.upcours', compact('cours','categories'));
+      }
     }
 
 
     //updating cours 
     public function updateCours(Request $request, $slug) {
+      if(auth()->user()->id_admin == "yes") {
         $data = $request->validate(
             array(
                 'title' => 'required',
@@ -161,23 +179,22 @@ class AdminController extends Controller
                 "message" => "Wow My Hero! Cours Has Been Updated Successfuly"
             ),
         );
-    }
 
-    //delete cours
-    public function deleteCours($id) {
-        $cours = Cours::find($id);
-        //deleting cours
+      }
     }
 
     //update categories 
     public function updateCategoriesForm($id) {
+      if(auth()->user()->id_admin == "yes") {
         //showing update form 
         $category = Category::find($id);
         return view('admin.updatecategory', compact('category'));
+      }
     }
 
     //store new updated cours in data base
     public function categoryUpdate($id, Request $request) {
+      if(auth()->user()->id_admin == "yes") {
         $category = Category::find($id);
         $data = $request->validate(
             array(
@@ -203,9 +220,25 @@ class AdminController extends Controller
             array(
                 'message' => 'Oh Thats Fast Bro!, Your Category Is Updated Hamdullah <3 ',
             )
-            );
+        );
+      }
+
     }
 
 
-    
+    //find cours and delete cours
+    public function deleteCourses($id) {
+      if(auth()->user()->id_admin == "yes") {
+        $cours = Cours::find($id);
+        $cours->where('id', $id)->delete();
+
+        return back()->with(
+            array(
+                "message" => "Done Bro ; Hamdullah Cours Deleted";
+            )
+        );
+      }
+    }
+
+  
 }
